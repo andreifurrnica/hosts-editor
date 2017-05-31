@@ -7,3 +7,6 @@ editor.exe -a [domain] -i [ip]
 
 ### Remove a host:
 editor.exe -rm [domain]
+
+## Compilation:
+pyinstaller --onefile hosts.py

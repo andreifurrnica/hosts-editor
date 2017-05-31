@@ -75,6 +75,7 @@ def main():
     parser.add_argument('-a', '--add')
     parser.add_argument('-ip', '--ip')
     parser.add_argument('-rm', '--remove')
+    parser.add_argument('-v', '--version', action='version', version='%(prog)s 0.2')
     args = parser.parse_args()
 
     hosts = read_hosts()
