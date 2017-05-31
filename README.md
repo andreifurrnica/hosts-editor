@@ -1,5 +1,5 @@
 # Hosts Editor
-Small CLI hosts editor for Windows written in Python. First Python project.
+Small CLI hosts editor for Windows written in Python
 
 # Usage
 ### Add a host:

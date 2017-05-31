@@ -5,8 +5,8 @@ block_cipher = None
 
 a = Analysis(['editor.py'],
              pathex=['F:\\proj\\hostseditor'],
-             binaries=None,
-             datas=None,
+             binaries=[],
+             datas=[],
              hiddenimports=[],
              hookspath=[],
              runtime_hooks=[],
@@ -25,4 +25,4 @@ exe = EXE(pyz,
           debug=False,
           strip=False,
           upx=True,
-          console=True , uac_admin=True)
+          console=True )

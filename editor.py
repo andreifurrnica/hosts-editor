@@ -1,5 +1,6 @@
 from terminaltables import AsciiTable
 import argparse
+import os
 
 
 def validate_ip(s):
@@ -22,7 +23,7 @@ def update_hosts(hosts):
         if validate_ip(i):
             hostsstring = hostsstring + i + "\t\t\t" + d + "\n"
 
-    f = open('C:/Windows/System32/drivers/etc/hosts','w')
+    f = open(os.environ['WINDIR'] + '\\System32\\drivers\\etc\\hosts','w')
     f.seek(0)
     f.truncate()
     f.write(hostsstring)
@@ -32,7 +33,7 @@ def update_hosts(hosts):
 
 def read_hosts():
     hosts = {}
-    for line in open('C:/Windows/System32/drivers/etc/hosts'):
+    for line in open(os.environ['WINDIR'] + '\\System32\\drivers\\etc\\hosts'):
         if not line.startswith('#'):
             host = line.split()
             if len(host):
